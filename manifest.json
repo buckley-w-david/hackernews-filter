@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "hackernews-filter",
   "description": "Filter out posts on HackerNews",
-  "version": "1.0",
+  "version": "1.1",
   "homepage_url": "https://github.com/buckley-w-david/hackernews-filter",
 
   "icons": {
@@ -20,7 +20,7 @@
 
   "content_scripts": [
     {
-      "matches": ["*://news.ycombinator.com/*"],
+      "matches": ["*://news.ycombinator.com/news"],
       "js": ["filter.js"]
     }
   ],
