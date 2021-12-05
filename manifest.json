@@ -1,0 +1,37 @@
+{
+  "manifest_version": 2,
+  "name": "hackernews-filter",
+  "description": "Filter out posts on HackerNews",
+  "version": "1.0",
+  "homepage_url": "https://github.com/buckley-w-david/hackernews-filter",
+
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png"
+  },
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "hackernews-filter@davidbuckley.ca",
+      "strict_min_version": "57.0"
+    }
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://news.ycombinator.com/*"],
+      "js": ["filter.js"]
+    }
+  ],
+
+  "options_ui": {
+    "page": "options/options.html",
+    "browser_style": true
+  },
+
+  "permissions": [
+      "<all_urls>",
+      "storage"
+  ]
+}
